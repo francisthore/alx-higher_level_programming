@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def islower(c):
-    if c in map(chr, range(ord('a'), ord('z')+1)):
+    if len(c) != 1:
+        raise ValueError()
+    if ord('a') <= ord(c) <= ord('z'):
         return True
     return False
