@@ -12,7 +12,7 @@ int check_cycle(listint_t *list)
 	listint_t *slw_ptr = list;
 	listint_t *fast_ptr = list;
 
-	while (slw_ptr != NULL && fast_ptr->next != NULL)
+	while (slw_ptr != NULL && fast_ptr != NULL && fast_ptr->next != NULL)
 	{
 		slw_ptr = slw_ptr->next;
 		fast_ptr = fast_ptr->next->next;
