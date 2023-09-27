@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-
+res = ""
 for char in "zYxWvUtSrQpOnMlKjIhGfEdCbA":
     if char.isupper():
-        print(char, end='')
+        res += "{}".format(char)
     else:
-        print(char.lower(), end='')
+        res += "{}".format(char.lower())
+
+print("{}".format(res), end='')
