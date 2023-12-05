@@ -46,5 +46,8 @@ class Square:
         """
             print the square onto the stdout as # signs
         """
+        if self.__size == 0:
+            print()
+            return
         for i in range(self.__size):
             print("#" * self.__size)
