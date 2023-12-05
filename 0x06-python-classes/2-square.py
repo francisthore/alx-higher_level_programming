@@ -11,12 +11,12 @@ class Square:
         """This is a function that initializes a sqaure object
 
         Args:
-                self: the object itself
-                size: size of one side of a square
+            self: the object itself
+            size: size of one side of a square
         """
-
-        try:
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
             self.__size = size
-        except Exception as e:
-            print(e)
-            
