@@ -2,9 +2,10 @@
 
 """This a module that adds integers
     It qualifys the values and casts them into ints
-    I am also running tests 
+    I am also running tests
     I am just putting lines rn idk what to write
 """
+
 
 def add_integer(a, b=98):
     """This function adds two integers
