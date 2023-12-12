@@ -1,0 +1,22 @@
+Testing module ``5-text_indentation`` with the function
+``text_indentation``
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now start:
+    >>> text_indentation("Helo my name is Francis. I am a qmark her? and a colon: there here and there")
+    Helo my name is Francis.
+    <BLANKLINE>
+    I am a qmark her?
+    <BLANKLINE>
+    and a colon:
+    <BLANKLINE>
+    there here and there
+    >>> text_indentation(889)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'

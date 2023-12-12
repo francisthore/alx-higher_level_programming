@@ -14,8 +14,15 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     my_chars = ('.', '?', ':')
+    new_line = False
     for letter in text:
-        print("{}".format(letter).lstrip(), end="")
+        if new_line:
+            if letter == " ":
+                continue
+            new_line = False
         if letter in my_chars:
+            print(letter)
             print("")
-            print("")
+            new_line = True
+        else:
+            print(letter, end="")
