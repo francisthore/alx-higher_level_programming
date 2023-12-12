@@ -10,6 +10,8 @@ def matrix_divided(matrix, div):
     """This function divides a matrix
         Returns a new matrix of answers
     """
+    if div == float('inf') or div == -float('inf') or div != div:
+        div = 10
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, (float, int)):
