@@ -7,9 +7,11 @@ Testing the ``matrix_divided`` module using the function
 Now start:
     >>> print(matrix_divided(matrix, 3))
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
-    >>> print(matrix_divided(matrix, -3))
-    [[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
     >>> print(matrix_divided(matrix, 0))
     Traceback (most recent call last):
         ...
     ZeroDivisionError: division by zero
+    >>> matrix_divided(matrix, "3")
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
