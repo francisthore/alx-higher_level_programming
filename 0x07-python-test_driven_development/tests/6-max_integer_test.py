@@ -17,3 +17,7 @@ class TestMaxInteger(unittest.TestCase):
             max_integer([1, 2, "3", 4])
         with self.assertRaises(TypeError):
             max_integer([1, 2.0, 3.4, 5])
+
+
+if __name__ == 'main':
+    unittest.main()
