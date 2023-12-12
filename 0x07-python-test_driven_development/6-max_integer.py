@@ -3,22 +3,22 @@
 """
 
 
-def max_integer(my_list=[]):
+def max_integer(list=[]):
     """Function to find and return the max integer in a list of integers
         If the list is empty, the function returns None
     """
-    if type(my_list) is not list:
+    if type(list) is not list:
         raise TypeError("list must be a list of integers")
-    for num in my_list:
+    for num in list:
         if not isinstance(num, int):
             raise TypeError("list must be a list of integers")
     
-    if len(my_list) == 0:
+    if len(list) == 0:
         return None
-    result = my_list[0]
+    result = list[0]
     i = 1
-    while i < len(my_list):
-        if my_list[i] > result:
-            result = my_list[i]
+    while i < len(list):
+        if list[i] > result:
+            result = list[i]
         i += 1
     return result
