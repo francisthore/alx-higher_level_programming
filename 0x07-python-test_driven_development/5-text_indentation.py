@@ -8,7 +8,7 @@
 
 
 def text_indentation(text):
-    """This function prints a text with 2 new lines 
+    """This function prints a text with 2 new lines
     after each of these characters: ., ? and :
     """
     if not isinstance(text, str):
