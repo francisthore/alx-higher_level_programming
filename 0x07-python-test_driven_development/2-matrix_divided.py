@@ -14,7 +14,7 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, (float, int)):
         raise TypeError("div must be a number")
-    row_len = matrix[0]
+    row_len = len(matrix[0])
     for row in matrix[1:]:
         if row_len != len(row):
             raise TypeError("Each row of the matrix must have the same size")
