@@ -9,3 +9,7 @@ Now we start:
     [3, -7, 21]
     >>> my_list.print_sorted()
     [-7, 3, 21]
+    >>> my_list.append(50)
+    >>> my_list_2
+    >>> my_list_2.print_sorted()
+    []
