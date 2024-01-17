@@ -1,0 +1,4 @@
+-- count the occurances of 89
+-- in my table
+SELECT COUNT(*) FROM first_table WHERE id = 89;
+
