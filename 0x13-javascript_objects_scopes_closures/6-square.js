@@ -3,10 +3,6 @@
 const ParentSquare = require('./5-square');
 
 module.exports = class Square extends ParentSquare {
-  constructor (w) {
-    super(w);
-  }
-
   charPrint (c) {
     if (!c) {
       this.print();
