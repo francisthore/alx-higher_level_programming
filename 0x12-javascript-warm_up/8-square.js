@@ -11,7 +11,7 @@ if (argv.length === 2 || !Number(argv[2])) {
   for (i = 0; i < Number(argv[2]); i++) {
     let line = '';
     for (j = 0; j < Number(argv[2]); j++) {
-      line += 'x';
+      line += 'X';
     }
     console.log(line);
   }
