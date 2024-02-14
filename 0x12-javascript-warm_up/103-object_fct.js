@@ -4,7 +4,7 @@ const myObject = {
   value: 12
 };
 console.log(myObject);
-const incr = function() {
+const incr = function () {
   this.value++;
 };
 
