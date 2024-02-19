@@ -12,3 +12,5 @@ cursor.execute('SELECT id, name FROM states ORDER BY states.id ASC')
 res = cursor.fetchall()
 for state in res:
     print(state)
+cursor.close()
+conn.close()
