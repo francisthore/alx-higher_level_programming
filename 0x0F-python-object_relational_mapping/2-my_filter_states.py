@@ -9,7 +9,7 @@ if __name__ == '__main__':
     conn = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
                            port=3306, db=sys.argv[3])
     cursor = conn.cursor()
-    cursor.execute("SELECT * from states WHERE name REGEXP  {};".format(sys.argv[4]));
+    cursor.execute(f'SELECT * from states WHERE name LIKE  "{sys.argv[4]}";')
     res = cursor.fetchall()
     for state in res:
         print(state)
