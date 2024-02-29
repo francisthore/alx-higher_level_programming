@@ -1,3 +1,3 @@
 #!/bin/bash
 # does a DELETE method
-curl -L -X DELETE "$1"
+curl -X DELETE "$1"
