@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ Gets the value of a header
 from a response
+
+Usage: ./1-hbtn_header.py <URL>
 """
 
 if __name__ == "__main__":
