@@ -4,9 +4,9 @@ from a response
 """
 
 if __name__ == "__main__":
-    from urllib.request import urlopen
+    import urllib
     import sys
 
     url = sys.argv[1]
-    with urlopen(url) as response:
+    with urllib.request.urlopen(url) as response:
         print(response.getheader('X-Request-Id'))
