@@ -9,6 +9,4 @@ if __name__ == "__main__":
 
     url = sys.argv[1]
     with urlopen(Request(url)) as response:
-        result = response.getheader('X-Request-Id')
-    if result:
-        print(result)
+        print(dict(response.headers).get("X-Request-Id"))
