@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Gets the value of a header
-from a response """
+from a response
+"""
 
 if __name__ == "__main__":
     from urllib.request import urlopen
