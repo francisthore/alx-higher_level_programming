@@ -2,9 +2,13 @@
 """ Gets the value of a header
 from a response
 """
-import urllib
-import os
+
 if __name__ == "__main__":
+    from urllib.request import urlopen
+    import sys
+
     url = sys.argv[1]
-    with urllib.request.urlopen(url) as response:
-        print(response.getheader('X-Request-Id'))
+    with urlopen(url) as response:
+        result = response.getheader('X-Request-Id')
+    if result:
+        print(result)
