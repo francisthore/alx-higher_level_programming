@@ -12,13 +12,14 @@ if __name__ == '__main__':
     mysql_username = argv[1]
     mysql_password = argv[2]
     database_name = argv[3]
+    state_name = argv[4]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         mysql_username, mysql_password, database_name))
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query_res = session.query(State).filter(State.name == argv[4]).first()
+    query_res = session.query(State).filter(State.name == state_name).first()
     if query_res:
         print(query_res.id)
     else:
