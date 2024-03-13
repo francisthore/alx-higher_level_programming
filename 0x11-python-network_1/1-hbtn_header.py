@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ Gets the value of a header
 from a response
+
+Usage: ./1-hbtn_header.py <URL>
 """
 
 if __name__ == "__main__":
@@ -8,5 +10,5 @@ if __name__ == "__main__":
     import sys
 
     url = sys.argv[1]
-    with urllib.request.urlopen(url) as response:
-        print(response.getheader('X-Request-Id'))
+    with urllib.request.urlopen(urllib.request.Request(url)) as response:
+        print(dict(response.headers).get("X-Request-Id"))
