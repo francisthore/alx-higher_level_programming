@@ -20,7 +20,7 @@ if __name__ == '__main__':
     session = Session()
 
     query_res = session.query(State).filter(
-        State.name.like('%{}%'.format(state_name))).first()
+        State.name == '{}'.format(state_name)).first()
     if query_res:
         print(query_res.id)
     else:
