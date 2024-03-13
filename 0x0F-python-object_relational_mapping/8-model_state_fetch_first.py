@@ -21,4 +21,6 @@ if __name__ == '__main__':
     query_res = session.query(State).first()
     if query_res:
         print("{}: {}".format(query_res.id, query_res.name))
+    else:
+        print("Nothing")
     session.close()
