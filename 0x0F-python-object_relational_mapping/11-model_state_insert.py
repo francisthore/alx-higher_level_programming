@@ -21,4 +21,8 @@ if __name__ == "__main__":
     new_state.name = 'Louisiana'
     session.add(new_state)
     session.commit()
+    query_res = session.query(State).filter(
+        State.name.like('Louisiana')).first()
+    if query_res:
+        print(query_res.id)
     session.close()
