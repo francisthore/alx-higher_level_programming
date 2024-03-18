@@ -19,7 +19,10 @@ if __name__ == '__main__':
     session = Session()
 
     query_res = session.query(State).filter(State.name.like('%a%'))
-    for res in query_res:
-        session.delete(res)
-        session.commit()
+    try:
+        for res in query_res:
+            session.delete(res)
+            session.commit()
+    except Exception as e:
+        print("Error: ", e)
     session.close()
