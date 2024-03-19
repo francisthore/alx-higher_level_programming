@@ -4,6 +4,7 @@
 from model_state import Base
 from sqlalchemy import Column, String, Integer, ForeignKey
 
+
 class City(Base):
     """This class is a model for a city"""
     __tablename__ = "cities"
