@@ -6,7 +6,7 @@ const charId = 18;
 const charUrl = 'https://swapi-api.alx-tools.com/api/people/' + charId + '/';
 const url = argv[2];
 
-request({ url, json: true }, function (error, response, body) {
+request({ url:url, json: true }, function (error, response, body) {
   if (error) {
     console.error(error);
   } else {
