@@ -8,12 +8,7 @@ request({ url, json: true }, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    let characters = body.characters;
-    characters.sort((a, b) => {
-      const idA = parseInt(a.match(/people\/(\d+)\//)[1], 10);
-      const idB = parseInt(b.match(/people\/(\d+)\//)[1], 10);
-      return idA - idB;
-    });
+    const characters = body.characters;
     for (let i = 0; i < characters.length; i++) {
       const url = characters[i];
       request({ url, json: true }, function (error, response, body) {
